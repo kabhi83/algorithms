@@ -18,7 +18,7 @@ public class MinimumPathSum {
 
 	public int minPathSum(int[][] grid) {
 
-		if (null == grid || grid.length == 0) {
+		if (grid == null || grid.length == 0) {
 			return 0;
 		}
 		int m = grid.length;

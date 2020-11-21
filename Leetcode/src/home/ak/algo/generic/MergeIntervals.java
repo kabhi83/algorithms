@@ -32,6 +32,7 @@ public class MergeIntervals {
 		// interval[0] -> start, interval[1] ->end
 		int i = 1;
 		while (i < intervals.length) {
+			// Start of the current is greater than the end of previous
 			if (intervals[i][0] > interval[1]) {
 				list.add(interval);
 				interval = intervals[i];

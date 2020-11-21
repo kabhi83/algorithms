@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.tree.bst;
+package home.ak.algo.tree.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -11,46 +11,49 @@ import java.util.Queue;
 /**
  * @author kundu
  * 
- *         Given a binary tree, populate an array to represent its
- *         level-by-level traversal. You should populate the values of all nodes
- *         of each level from left to right in separate sub-arrays.
+ *         Given a binary tree, populate an array to represent its zigzag level
+ *         order traversal. You should populate the values of all nodes of the
+ *         first level from left to right, then right to left for the next level
+ *         and keep alternating in the same manner for the following levels.
  *
  */
-public class LevelOrderTraversal {
+public class ZigzagTraversal {
 
 	static class TreeNode {
 		int val;
-		TreeNode left;
-		TreeNode right;
+		TreeNode left, right;
 
-		TreeNode(int x) {
-			val = x;
+		public TreeNode(int val) {
+			this.val = val;
 		}
 	}
 
 	public static List<List<Integer>> traverse(TreeNode root) {
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
-
 		if (null == root) {
 			return result;
 		}
 
 		// Initialize the queue
 		Queue<TreeNode> queue = new LinkedList<>();
-
-		// add the root
+		// Add the root node - at odd level
 		queue.add(root);
+
+		// Set the left-right traversal
+		boolean leftToRight = true;
 		while (!queue.isEmpty()) {
-			// Track the number of nodes in each level
-			// Don't use queue.size() directly as the value changes in for loop
 			int levelSize = queue.size();
-
-			List<Integer> currentLevel = new ArrayList<>(levelSize);
-
+			List<Integer> currentLevel = new ArrayList<>();
 			for (int i = 0; i < levelSize; i++) {
 				TreeNode current = queue.poll();
-				// add the node to the current level
-				currentLevel.add(current.val);
+				// Add to the current level based on the direction
+				if (leftToRight) {
+					currentLevel.add(current.val);
+				} else {
+					// Add to the first of the linked list
+					currentLevel.add(0, current.val);
+				}
+
 				// insert the children of current node in the queue
 				if (null != current.left) {
 					queue.add(current.left);
@@ -60,7 +63,8 @@ public class LevelOrderTraversal {
 				}
 			}
 			result.add(currentLevel);
-
+			// reverse the traversal direction
+			leftToRight = !leftToRight;
 		}
 		return result;
 	}
@@ -72,8 +76,10 @@ public class LevelOrderTraversal {
 		root.left.left = new TreeNode(9);
 		root.right.left = new TreeNode(10);
 		root.right.right = new TreeNode(5);
-		List<List<Integer>> result = LevelOrderTraversal.traverse(root);
-		System.out.println("Level order traversal: " + result);
+		root.right.left.left = new TreeNode(20);
+		root.right.left.right = new TreeNode(17);
+		List<List<Integer>> result = ZigzagTraversal.traverse(root);
+		System.out.println("Zigzag traversal: " + result);
 	}
 
 }

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.tree.bst;
+package home.ak.algo.tree.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

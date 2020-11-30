@@ -16,6 +16,14 @@ package home.ak.algo.binaysearch;
  *         Example 1: Input: [4, 6, 6, 6, 9], key = 6 Output: [1, 3]
  * 
  *         Example 2: Input: [1, 3, 8, 10, 15], key = 10 Output: [3, 3]
+ * 
+ *         Hint:
+ * 
+ *         When trying to find the first position of the ‘key’, we can update
+ *         end = middle - 1 to see if the key is present before middle.
+ * 
+ *         When trying to find the last position of the ‘key’, we can update
+ *         start = middle + 1 to see if the key is present after middle.
  *
  */
 public class KeyRange {
@@ -23,8 +31,8 @@ public class KeyRange {
 	public static int[] findRange(int[] arr, int key) {
 		int[] result = new int[] { -1, -1 };
 		result[0] = search(arr, key, false);
-		if(result[0] != -1) {
-			//found the item in the array
+		if (result[0] != -1) {
+			// found the item in the array
 			result[1] = search(arr, key, true);
 		}
 		return result;

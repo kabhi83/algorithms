@@ -4,8 +4,10 @@
 package home.ak.algo.generic;
 
 /**
- * @author user Say you have an array for which the ith element is the price of
- *         a given stock on day i.
+ * @author kundu
+ * 
+ *         Say you have an array for which the ith element is the price of a
+ *         given stock on day i.
  * 
  *         Design an algorithm to find the maximum profit. You may complete at
  *         most two transactions.
@@ -49,8 +51,8 @@ public class BuySellStockIII {
 	public int maxProfitAlternate(int[] prices) {
 		int buy1 = Integer.MAX_VALUE, buy2 = Integer.MAX_VALUE;
 		int profit1 = 0, profit2 = 0;
-		for(int i = 0; i < prices.length; i++){
-			//We should buy with min value and make make max profit
+		for (int i = 0; i < prices.length; i++) {
+			// We should buy with min value and make make max profit
 			buy1 = Math.min(buy1, prices[i]);
 			profit1 = Math.max(profit1, prices[i] - buy1);
 			buy2 = Math.min(buy2, prices[i] - profit1);
@@ -63,7 +65,7 @@ public class BuySellStockIII {
 		int[] prices = { 3, 3, 5, 0, 0, 3, 1, 4 };
 		int profit = new BuySellStockIII().maxProfit(prices);
 		System.out.println(profit);
-		
+
 		int profitAlt = new BuySellStockIII().maxProfitAlternate(prices);
 		System.out.println(profitAlt);
 	}

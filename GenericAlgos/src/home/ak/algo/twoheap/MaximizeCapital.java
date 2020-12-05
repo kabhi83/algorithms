@@ -35,14 +35,24 @@ import java.util.*;
  */
 public class MaximizeCapital {
 
+	static class Project {
+		int profit;
+		int capital;
+
+		Project(int profit, int capital) {
+			this.profit = profit;
+			this.capital = capital;
+		}
+	}
+
 	public static int findMaximumCapital(int[] capital, int[] profits, int numberOfProjects, int initialCapital) {
 		int n = profits.length;
-		PriorityQueue<int[]> minCapitalHeap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
-		PriorityQueue<int[]> maxProfitHeap = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+		PriorityQueue<Project> minCapitalHeap = new PriorityQueue<>((a, b) -> a.capital - b.capital);
+		PriorityQueue<Project> maxProfitHeap = new PriorityQueue<>((a, b) -> b.profit - a.profit);
 
 		// insert the capitals in the min heap
 		for (int i = 0; i < capital.length; i++) {
-			minCapitalHeap.offer(new int[] { capital[i], profits[i] });
+			minCapitalHeap.offer(new Project(profits[i], capital[i]));
 		}
 
 		// Find the best projects which can be completed with the initial capacity
@@ -51,7 +61,7 @@ public class MaximizeCapital {
 		// Add the projects which can be completed with the available capital, then pick
 		// the max profit one
 		for (int i = 0; i < numberOfProjects; i++) {
-			while (!minCapitalHeap.isEmpty() && minCapitalHeap.peek()[0] <= availableCapital) {
+			while (!minCapitalHeap.isEmpty() && minCapitalHeap.peek().capital <= availableCapital) {
 				// Add the project profit to maxHeap
 				maxProfitHeap.add(minCapitalHeap.poll());
 			}
@@ -62,7 +72,7 @@ public class MaximizeCapital {
 			}
 
 			// select the project with the maximum profit
-			availableCapital += profits[maxProfitHeap.poll()[1]];
+			availableCapital += maxProfitHeap.poll().profit;
 		}
 
 		return availableCapital;

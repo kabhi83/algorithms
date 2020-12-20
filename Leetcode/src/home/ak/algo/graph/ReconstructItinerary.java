@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.generic;
+package home.ak.algo.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;

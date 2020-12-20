@@ -36,7 +36,7 @@ public class NoRepeatSubstring {
 			// shrink the window from the beginning so we have only one occurrence of
 			// 'rightChar'
 			if (charIndexMap.containsKey(rightChar)) {
-				// Shrink from start till the rightChar occurrence
+				// Shrink from start till the rightChar is removed from the sub-string
 				windowStart = Math.max(windowStart, charIndexMap.get(rightChar) + 1);
 			}
 

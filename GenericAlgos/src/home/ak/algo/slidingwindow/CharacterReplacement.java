@@ -23,6 +23,14 @@ import java.util.Map;
  */
 public class CharacterReplacement {
 
+	/**
+	 * Current window size is from windowStart to windowEnd. We have a letter which
+	 * is repeating 'maxRepeatLetterCount' times, this means we can have a window
+	 * which has one letter repeating 'maxRepeatLetterCount' times and the remaining
+	 * letters we should replace. If the remaining letters are more than 'k', it is
+	 * the time to shrink the window as we are not allowed to replace more than 'k'
+	 * letters
+	 */
 	public static int findLength(String str, int k) {
 
 		int windowStart = 0, maxLength = 0, maxRepeatLetterCount = 0;
@@ -33,12 +41,7 @@ public class CharacterReplacement {
 			char rightChar = str.charAt(windowEnd);
 			letterFreqMap.put(rightChar, letterFreqMap.getOrDefault(rightChar, 0) + 1);
 			maxRepeatLetterCount = Math.max(maxRepeatLetterCount, letterFreqMap.get(rightChar));
-			// Current window size is from windowStart to windowEnd. We have a letter which
-			// is repeating 'maxRepeatLetterCount' times, this means we can have a window
-			// which has one letter repeating 'maxRepeatLetterCount' times and the remaining
-			// letters we should replace.
-			// If the remaining letters are more than 'k', it is the time to shrink the
-			// window as we are not allowed to replace more than 'k' letters
+
 			if (windowEnd - windowStart + 1 - maxRepeatLetterCount >= k) {
 				char leftChar = str.charAt(windowStart);
 				letterFreqMap.put(leftChar, letterFreqMap.get(leftChar) - 1);

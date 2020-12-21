@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp;
+package home.ak.algo.dp.twoDim;
 
 /**
  * @author kundu

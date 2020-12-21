@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp;
+package home.ak.algo.dp.twoDim;
 
 import java.util.Arrays;
 
@@ -29,7 +29,7 @@ import java.util.Arrays;
  *         knapsack(W,i) = if w[i] < W, ---------------------------------------
  *         MAX(value[i] + knapsack(W - weight[i], i -1), knapsack(W, i-1)),
  * 
- *         else, knapsack(W, i-1)
+ *         else, knapsack(W, i-1), we don't have any option other than to ignore
  * 
  *         4. Memoize
  * 
@@ -80,11 +80,14 @@ public class KnapsackProblem {
 	/**
 	 * Bottom up equation
 	 * 
-	 * dp[w][i] = MAX(val[i -  1] + dp[w-weight[i - 1]][i - 1], dp[w][i - 1])
+	 * dp[w][i] = MAX(val[i - 1] + dp[w-weight[i - 1]][i - 1], dp[w][i - 1])
 	 */
 	public static int knapsackButtomUp(int[] weights, int[] values, int W) {
 		int N = weights.length;
 		int[][] dp = new int[W + 1][N + 1];
+		//Implicit dp[0][0] = 0
+		
+		//For every item we have to consider its weight
 		for (int i = 1; i <= N; i++) {
 			for (int w = 1; w <= W; w++) {
 				if (weights[i - 1] <= w) {

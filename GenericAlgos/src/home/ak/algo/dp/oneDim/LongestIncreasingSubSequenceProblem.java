@@ -35,18 +35,18 @@ import java.util.Arrays;
  */
 public class LongestIncreasingSubSequenceProblem {
 
-	public static int lis(int[] arr) {
-		return lis(arr.length - 1, arr);
+	public static int lisRecursive(int[] arr) {
+		return lisRecursive(arr.length - 1, arr);
 	}
 
-	private static int lis(int i, int[] arr) {
+	private static int lisRecursive(int i, int[] arr) {
 		// Base case: when there is only 1 item to consider
 		if (i == 0)
 			return 1;
 
 		int max = 1;
 		for (int j = 0; j < i; j++) {
-			int lis = lis(j, arr);
+			int lis = lisRecursive(j, arr);
 			if (arr[i] > arr[j]) {
 				lis += 1;
 			}
@@ -55,7 +55,7 @@ public class LongestIncreasingSubSequenceProblem {
 		return max;
 	}
 
-	public static int lisTD(int[] arr) {
+	public static int lisBU(int[] arr) {
 		int N = arr.length;
 		int[] dp = new int[N];
 		// Minimum size of the longest common sequence is at least 1
@@ -71,13 +71,16 @@ public class LongestIncreasingSubSequenceProblem {
 		}
 		return dp[N - 1];
 	}
+	
+	
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		int[] arr = { 5, 2, 3, 6, 8 };
-		System.out.println(lisTD(arr));
+		System.out.println(lisRecursive(arr));
+		System.out.println(lisBU(arr));
 
 	}
 

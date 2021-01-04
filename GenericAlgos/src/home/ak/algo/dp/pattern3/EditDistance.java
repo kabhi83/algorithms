@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp.twoDim;
+package home.ak.algo.dp.pattern3;
 
 import java.util.Arrays;
 
@@ -56,7 +56,7 @@ import java.util.Arrays;
  * 
  *         Choose the minimum of ( 1, 2, 3).
  */
-public class EditDistanceProblem {
+public class EditDistance {
 
 	public static int editDistanceRecursion(String s1, String s2) {
 		return editDistanceRecursion(s1, s2, s1.length() - 1, s2.length() - 1);

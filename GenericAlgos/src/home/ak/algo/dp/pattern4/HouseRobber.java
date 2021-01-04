@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp.oneDim;
+package home.ak.algo.dp.pattern4;
 
 /**
  * @author kundu
@@ -29,7 +29,7 @@ package home.ak.algo.dp.oneDim;
  *         maxProfit(i, S) = MAX(S[i] + maxProfit(i-2, S) + maxProfit(i - 1, S))
  *
  */
-public class RobberProblem {
+public class HouseRobber {
 
 	public static int maxProfitRec(int[] S) {
 		return maxProfitRec(S.length - 1, S);

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp.oneDim;
+package home.ak.algo.dp.pattern3;
 
 import java.util.Arrays;
 
@@ -33,7 +33,7 @@ import java.util.Arrays;
  *         j = 0, 1, 2, .. i -1
  * 
  */
-public class LongestIncreasingSubSequenceProblem {
+public class LongestIncreasingSubsequence {
 
 	public static int lisRecursive(int[] arr) {
 		return lisRecursive(arr.length - 1, arr);
@@ -59,7 +59,7 @@ public class LongestIncreasingSubSequenceProblem {
 		int N = arr.length;
 		int[] dp = new int[N];
 		// Minimum size of the longest common sequence is at least 1
-		Arrays.fill(dp, 1);
+		Arrays.fill(dp, 1); // dp[0] = 1 as the minimum size of LIS
 		for (int i = 1; i < N; i++) {
 			for (int j = 0; j < i; j++) {
 				int lis = dp[j];
@@ -71,8 +71,6 @@ public class LongestIncreasingSubSequenceProblem {
 		}
 		return dp[N - 1];
 	}
-	
-	
 
 	/**
 	 * @param args
@@ -82,6 +80,8 @@ public class LongestIncreasingSubSequenceProblem {
 		System.out.println(lisRecursive(arr));
 		System.out.println(lisBU(arr));
 
+		int[] nums = { 4, 2, 3, 6, 10, 1, 12 };
+		System.out.println(lisBU(nums));
 	}
 
 }

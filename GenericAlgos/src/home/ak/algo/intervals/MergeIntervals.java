@@ -13,6 +13,10 @@ import java.util.List;
  * 
  *         Given a list of intervals, merge all the overlapping intervals to
  *         produce a list that has only mutually exclusive intervals.
+ * 
+ *         Example 1: Intervals: [[1,4], [2,5], [7,9]] Output: [[1,5], [7,9]]
+ *         Explanation: Since the first two intervals [1,4] and [2,5] overlap,
+ *         we merged them into one [1,5].
  *
  */
 public class MergeIntervals {
@@ -27,10 +31,10 @@ public class MergeIntervals {
 	}
 
 	public static List<Interval> merge(List<Interval> intervals) {
-		if(intervals.size() < 2) {
+		if (intervals.size() < 2) {
 			return intervals;
 		}
-		
+
 		List<Interval> mergedIntervals = new LinkedList<Interval>();
 
 		// Sort the intervals by start time
@@ -38,11 +42,11 @@ public class MergeIntervals {
 		Collections.sort(intervals, (a, b) -> a.start - b.start);
 		Interval interval = intervals.get(0);
 		int i = 1;
-		while(i < intervals.size()) {
-			//If current interval starts after the previous
+		while (i < intervals.size()) {
+			// If current interval starts after the previous
 			Interval current = intervals.get(i);
-			if(current.start > interval.end) {
-				//Add the previous interval
+			if (current.start > interval.end) {
+				// Add the previous interval
 				mergedIntervals.add(interval);
 				interval = current;
 			} else {
@@ -51,7 +55,7 @@ public class MergeIntervals {
 			i++;
 		}
 		mergedIntervals.add(interval);
-		
+
 		return mergedIntervals;
 	}
 

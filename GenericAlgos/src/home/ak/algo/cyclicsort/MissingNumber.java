@@ -3,8 +3,6 @@
  */
 package home.ak.algo.cyclicsort;
 
-import java.util.Arrays;
-
 /**
  * @author kundu
  * 
@@ -23,6 +21,7 @@ public class MissingNumber {
 		int i = 0;
 		while (i < nums.length) {
 			if (nums[i] < nums.length && nums[i] != nums[nums[i]]) {
+				// We will be ignoring the last number and try to arrange all before that
 				swap(nums, i, nums[i]);
 			} else {
 				i++;

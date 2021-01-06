@@ -31,11 +31,11 @@ public class IPAddressRestoration {
 		List<String> result = new ArrayList<>();
 		int[] octets = new int[4]; // 4 octet of the ip address
 		// Initiate backtracking - choose, explore and unchoose
-		restoreIPAddress(result, 0, S, octets, 0); // driver program
+		restoreIPAddress(0, S, 0, octets, result); // driver program
 		return result;
 	}
 
-	private static void restoreIPAddress(List<String> result, int index, String S, int[] octets, int octet) {
+	private static void restoreIPAddress(int index, String S, int octet, int[] octets, List<String> result) {
 		// Base case: If we have filled 4 segments (0, 1, 2, 3) and we are on the 4th,
 		// we will only record an answer if the string was decomposed fully
 		if (octet == 4 && index >= S.length()) {
@@ -46,7 +46,7 @@ public class IPAddressRestoration {
 			return;
 		}
 
-		// Generate segments to try, a segment can be 1 to 3 digits long.
+		// Generate segments to try. A segment can be 1 to 3 digits long.
 		for (int segmentLength = 1; segmentLength <= 3 && index + segmentLength <= S.length(); segmentLength++) {
 			String segment = S.substring(index, index + segmentLength);
 			int segmentValue = Integer.parseInt(segment);
@@ -58,7 +58,7 @@ public class IPAddressRestoration {
 			octets[octet] = segmentValue;
 			// Recurse on the segment choice - when finished & we come back here, the next
 			// loop iteration will try another segment
-			restoreIPAddress(result, index + segmentLength, S, octets, octet + 1);
+			restoreIPAddress(index + segmentLength, S, octet + 1, octets, result);
 		}
 	}
 

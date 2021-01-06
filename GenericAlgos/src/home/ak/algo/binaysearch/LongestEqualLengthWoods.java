@@ -34,7 +34,6 @@ public class LongestEqualLengthWoods {
 		// Maximum length ranges between 1 and the highest value in the array
 		int left = 1;
 		int right = Arrays.stream(woods).max().getAsInt();
-		int result = 0;
 		while (left <= right) {
 			int mid = left + (right - left) / 2;
 

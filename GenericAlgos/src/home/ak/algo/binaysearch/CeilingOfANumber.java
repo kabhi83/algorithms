@@ -43,7 +43,7 @@ public class CeilingOfANumber {
 			if (key > arr[mid]) {
 				start = mid + 1;
 			} else {
-				end = end - 1;
+				end = mid - 1;
 			}
 		}
 		// since the loop is running until 'start <= end', so at the end of the while

@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
 /**
  * @author kundu
  * 
- *         Given an array of points in the a 2D2D plane, find ‘K’ closest points
+ *         Given an array of points in the a 2D plane, find ‘K’ closest points
  *         to the origin.
  * 
  *         The Euclidean distance of a point P(x,y) from the origin can be

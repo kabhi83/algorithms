@@ -57,6 +57,8 @@ public class KClosestNumbers {
 		int closestIdx = search(arr, X);
 		// take K values on the either side of closest index
 		int low = closestIdx - K, high = closestIdx + K;
+		
+		//Accommodate for boundary checks
 		low = Math.max(low, 0); // 'low' should not be less than zero
 		high = Math.min(high, arr.length - 1); // 'high' should not be greater the size of the array
 

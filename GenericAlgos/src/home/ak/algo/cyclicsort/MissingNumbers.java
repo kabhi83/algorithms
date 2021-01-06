@@ -4,7 +4,6 @@
 package home.ak.algo.cyclicsort;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

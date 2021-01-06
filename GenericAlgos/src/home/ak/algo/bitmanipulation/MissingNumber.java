@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.bitwise.xor;
+package home.ak.algo.bitmanipulation;
 
 /**
  * @author kundu

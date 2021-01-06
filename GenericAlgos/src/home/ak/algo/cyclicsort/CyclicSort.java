@@ -20,6 +20,7 @@ public class CyclicSort {
 	public static void sort(int[] nums) {
 		int i = 0;
 		while (i < nums.length) {
+			// Get the actual sequence of ith item. -1 as the number ranges between 1 to n
 			int j = nums[i] - 1;
 			if (nums[i] != nums[j]) {
 				swap(nums, i, j);

@@ -44,6 +44,7 @@ public class InsertInterval {
 			mergedIntervals.add(intervals.get(i++));
 		}
 
+		// Place and merge (if necessary)
 		Interval interval = newInterval;
 		while (i < intervals.size()) {
 			Interval current = intervals.get(i);

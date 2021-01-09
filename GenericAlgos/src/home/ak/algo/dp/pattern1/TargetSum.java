@@ -21,7 +21,7 @@ import java.util.Arrays;
  *         given set has '2' ways to make a sum of '9': {+1+2+7-1} & {-1+2+7+1}
  *
  */
-public class TargetSumProblem {
+public class TargetSum {
 
 	/**
 	 * Let us assume all +ve values as one subset (S1) and all -ve values as another

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp.oneDim;
+package home.ak.algo.dp.pattern5;
 
 import java.util.Arrays;
 

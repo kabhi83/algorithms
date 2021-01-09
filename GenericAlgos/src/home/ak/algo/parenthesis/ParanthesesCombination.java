@@ -36,7 +36,7 @@ public class ParanthesesCombination {
 		}
 
 		Queue<ParenthesesString> queue = new LinkedList<>();
-		// Add the empty string to the queue
+		// Add the empty string to the queue along with open & close count
 		queue.add(new ParenthesesString("", 0, 0));
 		while (!queue.isEmpty()) {
 			ParenthesesString curr = queue.poll();

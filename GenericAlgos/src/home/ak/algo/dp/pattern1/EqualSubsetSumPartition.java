@@ -12,7 +12,7 @@ import java.util.Arrays;
  *         subsets such that the sum of elements in both the subsets is equal.
  *
  */
-public class EqualSubsetSumPartitionProblem {
+public class EqualSubsetSumPartition {
 
 	/**
 	 * Recursive solution by including an item at an index or ignoring the item

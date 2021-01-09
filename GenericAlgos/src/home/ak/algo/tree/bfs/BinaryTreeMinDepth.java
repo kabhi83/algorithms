@@ -13,7 +13,7 @@ import java.util.Queue;
  *         number of nodes along the shortest path from the root node to the
  *         nearest leaf node.
  */
-public class BinaryTreeDepth {
+public class BinaryTreeMinDepth {
 
 	static class TreeNode {
 		int val;

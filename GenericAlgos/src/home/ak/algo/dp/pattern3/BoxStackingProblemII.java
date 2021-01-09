@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp.oneDim;
+package home.ak.algo.dp.pattern3;
 
 import java.util.Arrays;
 
@@ -33,7 +33,7 @@ public class BoxStackingProblemII {
 		// Initialize the dp array
 		int[] dp = new int[dim.length];
 		Arrays.fill(dp, 1);
-		// check how many boxes i can accommodate
+		// check how many boxes the ith box can accommodate
 		// Something the increasing sub-sequence problem
 		int max = 1;
 		for (int i = 1; i < dim.length; i++) {

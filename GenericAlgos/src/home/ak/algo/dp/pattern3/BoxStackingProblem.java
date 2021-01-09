@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp.oneDim;
+package home.ak.algo.dp.pattern3;
 
 import java.util.Arrays;
 
@@ -22,6 +22,10 @@ import java.util.Arrays;
  *         making stack, remember we have unlimited number of boxes.
  * 
  *         State: area of the 2D base
+ * 
+ *         Algorithm: 1. create all the possible rotations for a box. 2. Sort
+ *         the box array in the descending order of the base area. 3. Initialize
+ *         the DP array with the default height of the boxes.
  *
  */
 public class BoxStackingProblem {
@@ -59,7 +63,7 @@ public class BoxStackingProblem {
 
 	public static int maxHeight(int[][] boxes) {
 		// Though we have unlimited supply of boxes, only 3 unique possibilities will
-		// have different base area. Hence genrate all the possible combinations
+		// have different base area. Hence generate all the possible combinations
 		Box[] box = new Box[boxes.length * 3]; // 3 possibilities per box
 		for (int i = 0; i < boxes.length; i++) {
 			int l = boxes[i][0];
@@ -90,8 +94,7 @@ public class BoxStackingProblem {
 		for (int i = 1; i < box.length; i++) {
 			for (int j = 0; j < i; j++) {
 				if (box[j].length > box[i].length && box[j].width > box[i].width) {
-					// Then only we can place the ith box on top of jth box; hence the height will
-					// add up
+					// we can place the ith box on top of jth box; hence the height will add up
 					dp[i] = Math.max(dp[i], box[i].height + dp[j]);
 					max = Math.max(max, dp[i]);
 				}

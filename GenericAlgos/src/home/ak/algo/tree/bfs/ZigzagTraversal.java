@@ -29,7 +29,7 @@ public class ZigzagTraversal {
 	}
 
 	public static List<List<Integer>> traverse(TreeNode root) {
-		List<List<Integer>> result = new ArrayList<List<Integer>>();
+		List<List<Integer>> result = new ArrayList<>();
 		if (null == root) {
 			return result;
 		}
@@ -50,7 +50,7 @@ public class ZigzagTraversal {
 				if (leftToRight) {
 					currentLevel.add(current.val);
 				} else {
-					// Add to the first of the linked list
+					// Add to the first of the list
 					currentLevel.add(0, current.val);
 				}
 

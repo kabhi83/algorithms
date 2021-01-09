@@ -28,7 +28,7 @@ import java.util.Arrays;
  *         return the minimum absolute difference of the above two sets
  *
  */
-public class MinimumSubsetSumDifferenceProblem {
+public class MinimumSubsetSumDifference {
 
 	public static int minSubsetSumDiffRec(int[] nums) {
 		return minSubsetSumDiffRec(nums, 0, 0, 0);

@@ -12,11 +12,11 @@ package home.ak.algo.dp.pattern1;
  *         Example 1: # Input: {1, 2, 3, 7}, S=6 Output: True The given set has
  *         a subset whose sum is '6': {1, 2, 3}
  * 
- *         Example 2: # Input: {1, 2, 7, 1, 5}, S=10 Output: True The given set
+ *         Example 2: # Input: {1, 2, 7, 1, 5}, S= 10 Output: True The given set
  *         has a subset whose sum is '10': {1, 2, 7}
  *
  */
-public class SubsetSumProblem {
+public class SubsetSum {
 
 	public static boolean canBuildSubsetSum(int[] nums, int sum) {
 		int n = nums.length;

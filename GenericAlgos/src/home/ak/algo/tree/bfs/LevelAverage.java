@@ -27,6 +27,7 @@ public class LevelAverage {
 
 	public static List<Double> findLevelAverages(TreeNode root) {
 		List<Double> result = new ArrayList<>();
+		
 		if (null == root) {
 			return result;
 		}
@@ -37,12 +38,12 @@ public class LevelAverage {
 		queue.add(root);
 		while (!queue.isEmpty()) {
 			int levelSize = queue.size();
-			List<Integer> currentLevel = new ArrayList<>();
+			//List<Integer> currentLevel = new ArrayList<>();
 			double levelSum = 0;
 			for (int i = 0; i < levelSize; i++) {
 				TreeNode current = queue.poll();
 				levelSum += current.val;
-				currentLevel.add(current.val);
+				//currentLevel.add(current.val);
 
 				if (null != current.left) {
 					queue.add(current.left);

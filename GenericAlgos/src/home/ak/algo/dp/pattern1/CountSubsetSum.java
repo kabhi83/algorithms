@@ -10,7 +10,7 @@ package home.ak.algo.dp.pattern1;
  *         whose sum is equal to a given number ‘S’.
  *
  */
-public class CountSubsetSumProblem {
+public class CountSubsetSum {
 
 	/**
 	 * Compute all the possible solutions by including the current item and then by

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.dp.twoDim;
+package home.ak.algo.dp.pattern5;
 
 /**
  * @author kundu

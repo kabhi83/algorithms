@@ -36,7 +36,7 @@ import java.util.Arrays;
  *         5. Build Bottom up solution
  *
  */
-public class KnapsackProblem {
+public class ZeroOneKnapsack {
 
 	/*
 	 * Recursive solution

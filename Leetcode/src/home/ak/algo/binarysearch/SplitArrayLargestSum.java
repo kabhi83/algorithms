@@ -31,7 +31,6 @@ public class SplitArrayLargestSum {
 	 * elements
 	 */
 	public int splitArray(int[] nums, int m) {
-		int n = nums.length;
 		int max = 0, sum = 0;
 		for (int num : nums) {
 			sum += num;

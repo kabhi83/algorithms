@@ -40,10 +40,10 @@ public class LongestEqualLengthWoods {
 			// we will use the middle number as a possible cut length and check if every
 			// wood in woods can be cut with that length. We need a helper function for it
 			// that loop and checks and returns true if number of woodCuts is >= k:
-
-			if (isValidCut(woods, mid, k)) {
-				// If helper returns True, i.e., more woods of equal length than k, and since we want even
-				// longer wood cuts, we move our left pointer in binary to middle+1. Otherwise,
+			int woodCount = cutCount(woods, mid);
+			if (woodCount > k) {
+				// more woods of equal length than k, and since we want even longer wood cuts,
+				// we move our left pointer in binary to middle+1. Otherwise,
 				// we move our right to middle-1 if wood cut was not valid.
 				left = mid + 1;
 			} else {
@@ -53,12 +53,12 @@ public class LongestEqualLengthWoods {
 		return left;
 	}
 
-	private boolean isValidCut(int[] woods, int cutLength, int k) {
+	private int cutCount(int[] woods, int cutLength) {
 		int count = 0;
 		for (int wood : woods) {
 			count += wood / cutLength;
 		}
-		return count > k;
+		return count;
 	}
 
 	/**

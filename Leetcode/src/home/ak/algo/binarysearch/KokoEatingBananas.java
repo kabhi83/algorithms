@@ -23,8 +23,8 @@ import java.util.Arrays;
  *         Return the minimum integer K such that she can eat all the bananas
  *         within H hours.
  *
- *         Example 1: Input: piles = [3,6,7,11], H = 8 Output: 4 
- *         
+ *         Example 1: Input: piles = [3,6,7,11], H = 8 Output: 4
+ * 
  *         Example 2: Input: piles = [30,11,23,4,20], H = 5 Output: 30
  * 
  */
@@ -36,10 +36,10 @@ public class KokoEatingBananas {
 		while (left < right) {
 			int mid = left + (right - left) / 2;
 			int k = timeToEat(piles, mid);
-			if (k <= H) {
-				right = mid - 1; // Reduce eating rate
-			} else {
+			if (k > H) {
 				left = mid + 1; // Increase eating rate
+			} else {
+				right = mid - 1; // Reduce eating rate
 			}
 		}
 		return left;
@@ -61,11 +61,11 @@ public class KokoEatingBananas {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] piles1 = {3, 6, 7, 11};
+		int[] piles1 = { 3, 6, 7, 11 };
 		int H = 8;
 		System.out.println(new KokoEatingBananas().minEatingSpeed(piles1, H));
-		
-		int[] piles2 = {30,11,23,4,20};
+
+		int[] piles2 = { 30, 11, 23, 4, 20 };
 		H = 5;
 		System.out.println(new KokoEatingBananas().minEatingSpeed(piles2, H));
 	}

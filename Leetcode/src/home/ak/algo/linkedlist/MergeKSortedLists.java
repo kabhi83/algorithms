@@ -39,7 +39,7 @@ public class MergeKSortedLists {
 		ListNode dummy = new ListNode(-1);
 		ListNode current = dummy;
 		while (minHeap.size() > 0) {
-			current.next = new ListNode(minHeap.remove());
+			current.next = new ListNode(minHeap.poll());
 			current = current.next;
 		}
 		return dummy.next;

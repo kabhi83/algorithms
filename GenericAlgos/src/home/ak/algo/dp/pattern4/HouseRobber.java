@@ -16,9 +16,9 @@ package home.ak.algo.dp.pattern4;
  * 
  *         S - is the array having the values of stash in each house.
  * 
- *         int[] S= { 20,25, 30, 15, 10 }
+ *         int[] S= {20, 25, 30, 15, 10 }
  * 
- *         State: i -> index of the house lat robbed
+ *         State: i -> index of the house last robbed
  * 
  *         Cost Function: maxProfit(i, S)
  * 

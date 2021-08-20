@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.generic;
+package home.ak.algo.generic.stock;
 
 /**
  * @author user

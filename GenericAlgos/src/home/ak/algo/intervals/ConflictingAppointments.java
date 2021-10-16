@@ -2,6 +2,18 @@ package home.ak.algo.intervals;
 
 import java.util.Arrays;
 
+/**
+ * @author kundu
+ * 
+ *         Given an array of intervals representing ‘N’ appointments, find out
+ *         if a person can attend all the appointments.
+ * 
+ *         Example: Appointments: [[1,4], [2,5], [7,9]] Output: false
+ * 
+ *         Explanation: Since [1,4] and [2,5] overlap, a person cannot attend
+ *         both of these appointments.
+ *
+ */
 public class ConflictingAppointments {
 
 	static class Interval {

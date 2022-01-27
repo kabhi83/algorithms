@@ -3,6 +3,8 @@
  */
 package home.ak.algo.bt;
 
+import java.util.Stack;
+
 import home.ak.algo.bt.BinaryTree.Node;
 
 /**
@@ -20,6 +22,25 @@ public class L1_BinaryTreeTraversal {
 		preorderTraversal(node.right);
 	}
 
+	public static void iterativePreorderTraversal(Node node) {
+		if (null == node) {
+			return;
+		}
+		// Iterative preorder
+		Stack<Node> stack = new Stack<>();
+		stack.add(node);
+		while (!stack.isEmpty()) {
+			Node temp = stack.pop();
+			System.out.print(temp.data + " ");
+			if (null != temp.right) {
+				stack.add(temp.right);
+			}
+			if (null != temp.left) {
+				stack.add(temp.left);
+			}
+		}
+	}
+
 	public static void inorderTraversal(Node node) {
 		if (null == node) {
 			return;
@@ -27,6 +48,27 @@ public class L1_BinaryTreeTraversal {
 		inorderTraversal(node.left);
 		System.out.print(node.data + " ");
 		inorderTraversal(node.right);
+	}
+
+	public static void iterativeInorderTraversal(Node node) {
+
+		Stack<Node> stack = new Stack<>();
+		Node curr = node;
+		while (!stack.isEmpty() || null != curr) {
+			// if the current node exists, push it into the stack (defer it)
+			// and move to its left child
+			if (null != curr) {
+				stack.push(curr);
+				curr = curr.left;
+			} else {
+				// if the current node is null, pop an element from
+				// the stack, print it, and finally set the current node to its
+				// right child
+				curr = stack.pop();
+				System.out.println(curr.data);
+				curr = curr.right;
+			}
+		}
 	}
 
 	public static void postorderTraversal(Node node) {
@@ -55,5 +97,8 @@ public class L1_BinaryTreeTraversal {
 		inorderTraversal(tree.root);
 		System.out.println();
 		postorderTraversal(tree.root);
+		System.out.println();
+		System.out.println("************Iterative************");
+		iterativePreorderTraversal(tree.root);
 	}
 }

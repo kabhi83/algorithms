@@ -9,7 +9,7 @@ package home.ak.algo.bs.starter;
  *         Binary search on the reverse sorted array
  *
  */
-public class BinarySearchOnReverseSortedArray {
+public class L1_BinarySearchOnReverseSortedArray {
 
 	public static int binarySearch(int[] arr, int x) {
 

@@ -9,7 +9,7 @@ import home.ak.algo.bt.BinaryTree.Node;
  * @author kundu
  *
  */
-public class L12_BSTLowestCommonAncestor {
+public class L14_BSTLowestCommonAncestor {
 
 	public static Node lowestCommonAncestor(Node root, Node p, Node q) {
 		if (null == root) {

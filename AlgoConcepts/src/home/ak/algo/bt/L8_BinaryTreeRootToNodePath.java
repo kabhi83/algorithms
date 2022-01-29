@@ -12,7 +12,7 @@ import home.ak.algo.bt.BinaryTree.Node;
  * @author kundu
  *
  */
-public class L8_RootToNodePath {
+public class L8_BinaryTreeRootToNodePath {
 
 	public static List<Integer> getPath(Node root, int x) {
 		List<Integer> path = new ArrayList<>();

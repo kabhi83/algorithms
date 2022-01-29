@@ -12,7 +12,7 @@ import home.ak.algo.bt.BinaryTree.Node;
  * @author kundu
  *
  */
-public class L11_BinaryTreeFreeFromInorderPostorder {
+public class L11_BinaryTreeFromInorderPostorder {
 
 	public static Node buildTree(int[] postorder, int[] inorder) {
 		Map<Integer, Integer> inMap = new HashMap<>();

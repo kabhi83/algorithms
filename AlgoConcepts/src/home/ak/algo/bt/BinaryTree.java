@@ -4,14 +4,7 @@
 package home.ak.algo.bt;
 
 /**
- * @author kundu
- *                                      8
- *                                    /   \
- *                                   3	   10
- *                                  / \     \
- *                                 1   6     14
- *                                 	  / \	 /
- *									 4	 7  13
+ * @author kundu 8 / \ 3 10 / \ \ 1 6 14 / \ / 4 7 13
  */
 public class BinaryTree {
 
@@ -47,6 +40,11 @@ public class BinaryTree {
 		return node;
 	}
 
+	/**
+	 * Utility function to delete a node from the tree
+	 * 
+	 * @param data
+	 */
 	public void delete(int data) {
 		root = delete(root, data);
 	}
@@ -81,7 +79,39 @@ public class BinaryTree {
 	}
 
 	private int findSmallestValue(Node node) {
-		return node.left == null ? node.data : findSmallestValue(node.right);
+		return node.left == null ? node.data : findSmallestValue(node.left);
+	}
+
+	/**
+	 * Inorder traversal to print the tree nodes
+	 * 
+	 * @param root
+	 */
+	public void print(Node root) {
+		if (null == root) {
+			return;
+		}
+		print(root.left);
+		System.out.print(root.data + " ");
+		print(root.right);
+	}
+
+	public static void main(String[] args) {
+		// 8,6,5,7,10,9,11
+		BinaryTree tree = new BinaryTree();
+		tree.add(8);
+		tree.add(6);
+		tree.add(5);
+		tree.add(7);
+		tree.add(10);
+		tree.add(9);
+		tree.add(11);
+
+		tree.print(tree.root);
+		tree.delete(8);
+		System.out.println("\n________________\n");
+		tree.print(tree.root);
+
 	}
 
 }

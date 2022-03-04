@@ -25,6 +25,13 @@ public class Graph {
 		adjList = new HashMap<>();
 	}
 
+	public Graph(int vertices) {
+		adjList = new HashMap<>();
+		for (int i = 0; i < vertices; i++) {
+			addVertex(i + 1);
+		}
+	}
+
 	public void addVertex(int vertex) {
 		adjList.putIfAbsent(vertex, new ArrayList<>());
 	}
@@ -33,7 +40,16 @@ public class Graph {
 		adjList.get(srcVertex).add(destVertex);
 	}
 
-	public List<Integer> getAdjacentVertices(int vertex) {
+	public void addUndirectedEdge(int srcVertex, int destVertex) {
+		adjList.get(srcVertex).add(destVertex);
+		adjList.get(destVertex).add(srcVertex);
+	}
+
+	public Map<Integer, List<Integer>> getAdjacencyList() {
+		return adjList;
+	}
+
+	private List<Integer> getAdjacentVertices(int vertex) {
 		return adjList.get(vertex);
 	}
 
@@ -102,6 +118,7 @@ public class Graph {
 				System.out.print(" " + current);
 
 				for (int vertex : getAdjacentVertices(current)) {
+					// Push only unseen adjacent nodes
 					if (!seenSet.contains(vertex)) {
 						queue.offer(vertex);
 					}

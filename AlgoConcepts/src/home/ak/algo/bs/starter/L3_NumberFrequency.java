@@ -11,7 +11,7 @@ package home.ak.algo.bs.starter;
  *         O(Logn)
  *
  */
-public class L2_NumberFrequency {
+public class L3_NumberFrequency {
 
 	public static int countOccurrences(int[] arr, int x) {
 		int first = getFirstIndex(arr, x);

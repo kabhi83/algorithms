@@ -1,14 +1,14 @@
 /**
  * 
  */
-package home.ak.algo.graph.starter;
+package home.ak.algo.graph;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-import home.ak.algo.graph.starter.WeightedGraph.Node;
+import home.ak.algo.graph.WeightedGraph.Node;
 
 /**
  * @author kundu
@@ -16,7 +16,7 @@ import home.ak.algo.graph.starter.WeightedGraph.Node;
  *         Dijkstra's Shortest Path Algorithm
  *
  */
-public class L6_ShortestPathUndirectedGraph {
+public class L7_ShortestPathUndirectedGraph {
 	static class NodeDistPair {
 		int node;
 		int dist;

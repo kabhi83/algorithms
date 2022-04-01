@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.graph.starter;
+package home.ak.algo.graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;

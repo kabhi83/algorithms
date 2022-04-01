@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.graph.starter;
+package home.ak.algo.graph;
 
 import java.util.LinkedList;
 import java.util.List;

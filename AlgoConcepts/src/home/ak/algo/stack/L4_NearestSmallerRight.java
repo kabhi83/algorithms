@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.stack.cat1;
+package home.ak.algo.stack;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -10,7 +10,7 @@ import java.util.Stack;
  * @author kundu
  *
  */
-public class NearestSmallerRight {
+public class L4_NearestSmallerRight {
 
 	public static int[] nearestSmallerRight(int[] arr) {
 		int n = arr.length;

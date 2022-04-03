@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.stack.cat1;
+package home.ak.algo.stack;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Stack;
  * @author kundu
  *
  */
-public class NearestSmallerLeft {
+public class L3_NearestSmallerLeft {
 
 	public static List<Integer> nearestSmallerLeft(int[] arr) {
 

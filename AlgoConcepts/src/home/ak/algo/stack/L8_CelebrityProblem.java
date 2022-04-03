@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.stack.cat3;
+package home.ak.algo.stack;
 
 import java.util.Stack;
 
@@ -14,7 +14,7 @@ import java.util.Stack;
  *         party.
  *
  */
-public class CelebrityProblem {
+public class L8_CelebrityProblem {
 
 	public static int findCelebrity(int[][] party, int numPeople) {
 		int celebrity = -1;

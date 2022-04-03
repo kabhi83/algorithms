@@ -1,4 +1,4 @@
-package home.ak.algo.stack.cat2;
+package home.ak.algo.stack;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -14,7 +14,7 @@ import java.util.Stack;
  *         day is less than or equal than its price on the given day.
  *
  */
-public class StockSpanProblem {
+public class L5_StockSpanProblem {
 
 	/**
 	 * Stock Span Plan is current price index - Next Greatest Left Index

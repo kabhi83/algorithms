@@ -1,7 +1,4 @@
-/**
- * 
- */
-package home.ak.algo.stack.cat2;
+package home.ak.algo.stack;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -9,40 +6,17 @@ import java.util.Stack;
 /**
  * @author kundu
  * 
- *         Given a rows x cols binary matrix filled with 0's and 1's, find the
- *         largest rectangle containing only 1's and return its area.
+ *         Given an array of integers heights representing the histogram's bar
+ *         height where the width of each bar is 1, return the area of the
+ *         largest rectangle in the histogram.
  *
  */
-public class MaxAreaRectangleBinaryMatrix {
+public class L6_LargestRectangleHistogram {
 
 	/**
-	 * This problem is similar to the Maximum Area Histogram (MAH). We need to
-	 * convert the 2D matrix to its 1D representation by computing MAH layer by
-	 * layer starting from top and building the MAH.
+	 * Solution to the problem is based on NSL and NSR (NS - Next Smaller)
 	 */
-	public static int maxAreaRectangle(int[][] matrix) {
-
-		int max = Integer.MIN_VALUE;
-
-		int[] heights = new int[matrix[0].length];
-
-		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[0].length; j++) {
-				if (matrix[i][j] == 0) {
-					heights[j] = 0;
-				} else {
-					heights[j] += matrix[i][j];
-				}
-			}
-			max = Math.max(max, largestRectangleArea(heights));
-		}
-		return max;
-	}
-
-	/**
-	 * Method to compute the maximum area of histogram
-	 */
-	private static int largestRectangleArea(int[] heights) {
+	public static int largestRectangleArea(int[] heights) {
 		int pseudoLeftIdx = -1;
 		int pseudoRightIdx = heights.length;
 
@@ -86,9 +60,7 @@ public class MaxAreaRectangleBinaryMatrix {
 	}
 
 	public static void main(String[] args) {
-		int[][] matrix = { { 0, 1, 1, 0 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 0, 0 }, };
-
-		System.out.println(maxAreaRectangle(matrix));
+		int[] heights = { 2, 1, 5, 6, 2, 3, 1 };
+		System.out.println(largestRectangleArea(heights));
 	}
-
 }

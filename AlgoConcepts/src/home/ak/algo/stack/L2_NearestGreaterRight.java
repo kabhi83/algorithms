@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.stack.cat1;
+package home.ak.algo.stack;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Stack;
  *         -1.
  *
  */
-public class NearestGreaterRight {
+public class L2_NearestGreaterRight {
 
 	/**
 	 * Case 1: stack empty -> -1

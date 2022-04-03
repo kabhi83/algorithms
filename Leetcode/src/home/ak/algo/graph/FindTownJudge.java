@@ -31,9 +31,9 @@ public class FindTownJudge {
 
 	public int findJudge(int N, int[][] trust) {
 
-		int[] trustCount = new int[N + 1]; // +1 since people are lebeled from 1 to N
+		int[] trustCount = new int[N + 1]; // +1 since people are labeled from 1 to N
 
-		// Concept of in-degree and out-degree edges. If a person gives turst -> Giver
+		// Concept of in-degree and out-degree edges. If a person gives trust -> Giver
 		// loses one point and receiver gets one point
 
 		for (int i = 0; i < trust.length; i++) {

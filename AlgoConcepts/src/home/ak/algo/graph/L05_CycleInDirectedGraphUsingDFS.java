@@ -10,7 +10,7 @@ import java.util.Map;
  * @author kundu
  *
  */
-public class L5_CycleInDirectedGraphUsingDFS {
+public class L05_CycleInDirectedGraphUsingDFS {
 
 	public static boolean isCyclicGraph(Graph graph) {
 		Map<Integer, List<Integer>> adjList = graph.getAdjacencyList();

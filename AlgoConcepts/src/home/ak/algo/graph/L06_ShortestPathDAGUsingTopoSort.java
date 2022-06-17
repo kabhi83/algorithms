@@ -16,7 +16,7 @@ import home.ak.algo.graph.WeightedGraph.Node;
  * @author kundu
  *
  */
-public class L6_ShortestPathDAGUsingTopoSort {
+public class L06_ShortestPathDAGUsingTopoSort {
 
 	static class NodeDistPair {
 		int node;

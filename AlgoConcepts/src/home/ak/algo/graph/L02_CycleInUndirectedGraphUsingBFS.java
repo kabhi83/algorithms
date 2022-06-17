@@ -12,7 +12,7 @@ import java.util.Queue;
  * @author kundu
  *
  */
-public class L2_CycleInUndirectedGraphUsingBFS {
+public class L02_CycleInUndirectedGraphUsingBFS {
 
 	static class Pair<K, V> {
 		K key;

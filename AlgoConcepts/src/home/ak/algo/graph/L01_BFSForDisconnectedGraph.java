@@ -12,7 +12,7 @@ import java.util.Queue;
  * @author kundu
  *
  */
-public class L1_BFSForDisconnectedGraph {
+public class L01_BFSForDisconnectedGraph {
 
 	public static void traverse(Graph graph) {
 		int vertices = graph.getAdjacencyList().size();

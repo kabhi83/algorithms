@@ -12,7 +12,7 @@ import java.util.Stack;
  * @author kundu
  *
  */
-public class L4_DFSForDisconnectedGraph {
+public class L04_DFSForDisconnectedGraph {
 
 	public static void traverse(Graph graph) {
 		Map<Integer, List<Integer>> adjList = graph.getAdjacencyList();

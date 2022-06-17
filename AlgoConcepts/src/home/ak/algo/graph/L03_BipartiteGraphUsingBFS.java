@@ -22,7 +22,7 @@ import java.util.Queue;
  *         O(V)
  *
  */
-public class L3_BipartiteGraphUsingBFS {
+public class L03_BipartiteGraphUsingBFS {
 
 	/**
 	 * This method is executed on a single undirected graph

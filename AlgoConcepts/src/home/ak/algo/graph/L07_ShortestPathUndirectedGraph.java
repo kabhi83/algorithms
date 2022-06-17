@@ -16,7 +16,7 @@ import home.ak.algo.graph.WeightedGraph.Node;
  *         Dijkstra's Shortest Path Algorithm
  *
  */
-public class L7_ShortestPathUndirectedGraph {
+public class L07_ShortestPathUndirectedGraph {
 	static class NodeDistPair {
 		int node;
 		int dist;

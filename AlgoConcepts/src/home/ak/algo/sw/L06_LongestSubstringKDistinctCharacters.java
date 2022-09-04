@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.sw.variable;
+package home.ak.algo.sw;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +23,7 @@ import java.util.Map;
  *         characters are "cbbeb" & "bbebi".
  *
  */
-public class LongestSubstringKDistinctCharacters {
+public class L06_LongestSubstringKDistinctCharacters {
 
 	public static int longestSubStringWithKDistinctChars(String str, int k) {
 		int windowStart = 0, maxLength = 0;

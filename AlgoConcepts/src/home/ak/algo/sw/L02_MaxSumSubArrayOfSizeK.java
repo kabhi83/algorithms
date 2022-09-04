@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.sw.fixed;
+package home.ak.algo.sw;
 
 /**
  * @author kundu
@@ -19,19 +19,20 @@ package home.ak.algo.sw.fixed;
  *         Window Size = end - start + 1 (for 0 based array index)
  *
  */
-public class MaxSumSubArrayOfSizeK {
+public class L02_MaxSumSubArrayOfSizeK {
 
 	public static int findMaxSumSubArray(int[] arr, int k) {
-		int windowStart = 0;
-		int windowSum = 0;
+		int start = 0;
+		int sum = 0;
 		int maxSum = Integer.MIN_VALUE;
-		for (int windowEnd = 0; windowEnd < arr.length; windowEnd++) {
-			windowSum += arr[windowEnd];
-			// Check if window size reached
-			if (windowEnd - windowStart + 1 >= k) {
-				maxSum = Math.max(maxSum, windowSum);
+		for (int end = 0; end < arr.length; end++) {
+			sum += arr[end];
+			// slide the window, we don't need to slide if we've not hit the required window
+			// size of 'k'
+			if (end >= k - 1) {
+				maxSum = Math.max(maxSum, sum);
 				// subtract the element going out and increment windowStart
-				windowSum -= arr[windowStart++];
+				sum -= arr[start++]; // slide the window ahead
 			}
 		}
 		return maxSum;

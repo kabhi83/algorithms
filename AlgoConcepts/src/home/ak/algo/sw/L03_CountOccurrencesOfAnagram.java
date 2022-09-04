@@ -1,11 +1,10 @@
 /**
  * 
  */
-package home.ak.algo.sw.fixed;
+package home.ak.algo.sw;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @author kundu
@@ -22,7 +21,7 @@ import java.util.Set;
  *         for, fro, ofr, orf, rof, rfo,
  *
  */
-public class CountOccurrencesOfAnagram {
+public class L03_CountOccurrencesOfAnagram {
 
 	/**
 	 * This is a sliding window problem, where the length of the window is the

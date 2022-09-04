@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.sw.variable;
+package home.ak.algo.sw;
 
 /**
  * @author kundu
@@ -11,7 +11,7 @@ package home.ak.algo.sw.variable;
  *         given value k.
  *
  */
-public class LongestSubArrayOfSumK {
+public class L05_LongestSubArrayOfSumK {
 
 	/**
 	 * In case of variable window size problem, we need to check for all the

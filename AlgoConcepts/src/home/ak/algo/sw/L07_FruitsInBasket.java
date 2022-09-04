@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.sw.variable;
+package home.ak.algo.sw;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +35,7 @@ import java.util.Map;
  *         from the toy rack row and toys can only be of two categories.
  *
  */
-public class FruitsInBasket {
+public class L07_FruitsInBasket {
 
 	public static int maxFruitsIntoBasket(char[] fruits) {
 		if (null == fruits || fruits.length == 0) {

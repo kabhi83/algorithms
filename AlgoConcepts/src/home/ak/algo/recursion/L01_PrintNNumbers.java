@@ -5,23 +5,22 @@ package home.ak.algo.recursion;
 
 /**
  * @author kundu
- * 
- *         Print from 1 to N without using + operator
  *
  */
-public class L2_PrintNNumberWithBacktrack {
+public class L01_PrintNNumbers {
 
 	public static void print(int i, int N) {
-		if (i < 1) {
+		// Base case
+		if (i > N) {
 			return;
 		}
-		print(i - 1, N);
 		System.out.println(i);
+		print(i + 1, N);
 	}
-
+	
 	public static void main(String[] args) {
 		int N = 10;
-		print(N, N);
+		print(1, N);
 	}
 
 }

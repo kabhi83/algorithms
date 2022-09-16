@@ -14,7 +14,7 @@ import java.util.List;
  *         In base case if the condition is satisfied, return true
  *
  */
-public class L9_AnySubsequenceWithSumK {
+public class L09_AnySubsequenceWithSumK {
 
 	public static void subsequences(int[] arr, int K) {
 		subsequences(0, arr.length, 0, new ArrayList<Integer>(), arr, K);

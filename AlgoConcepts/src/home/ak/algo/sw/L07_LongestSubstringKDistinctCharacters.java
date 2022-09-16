@@ -23,7 +23,7 @@ import java.util.Map;
  *         characters are "cbbeb" & "bbebi".
  *
  */
-public class L06_LongestSubstringKDistinctCharacters {
+public class L07_LongestSubstringKDistinctCharacters {
 
 	public static int longestSubStringWithKDistinctChars(String str, int k) {
 		int windowStart = 0, maxLength = 0;

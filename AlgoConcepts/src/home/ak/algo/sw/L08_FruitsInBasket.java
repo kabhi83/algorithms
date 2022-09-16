@@ -35,7 +35,7 @@ import java.util.Map;
  *         from the toy rack row and toys can only be of two categories.
  *
  */
-public class L07_FruitsInBasket {
+public class L08_FruitsInBasket {
 
 	public static int maxFruitsIntoBasket(char[] fruits) {
 		if (null == fruits || fruits.length == 0) {

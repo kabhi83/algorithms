@@ -7,7 +7,7 @@ package home.ak.algo.recursion;
  * @author kundu
  *
  */
-public class L3_SumOfFirstNNumbers {
+public class L03_SumOfFirstNNumbers {
 
 	/**
 	 * Parameterized function - operated on the parameter "sum"

@@ -12,7 +12,7 @@ import java.util.List;
  *         Take | Not Take Pattern
  *
  */
-public class L7_AllSubsequences {
+public class L07_AllSubsequences {
 
 	public static void subsequences(int[] arr) {
 		subsequences(0, arr.length, new ArrayList<Integer>(), arr);

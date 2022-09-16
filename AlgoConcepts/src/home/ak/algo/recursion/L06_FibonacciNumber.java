@@ -7,7 +7,7 @@ package home.ak.algo.recursion;
  * @author kundu
  *
  */
-public class L6_FibonacciNumber {
+public class L06_FibonacciNumber {
 
 	public static int fibonacci(int n) {
 		if (n <= 1) {

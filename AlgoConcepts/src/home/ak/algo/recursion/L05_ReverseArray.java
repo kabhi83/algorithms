@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @author kundu
  *
  */
-public class L5_ReverseArray {
+public class L05_ReverseArray {
 
 	public static void reverse(int[] arr) {
 		reverse(0, arr.length, arr);

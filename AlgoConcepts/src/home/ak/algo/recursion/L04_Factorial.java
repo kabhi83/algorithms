@@ -7,7 +7,7 @@ package home.ak.algo.recursion;
  * @author kundu
  *
  */
-public class L4_Factorial {
+public class L04_Factorial {
 
 	public static int factorial(int n) {
 		if (n == 0) {

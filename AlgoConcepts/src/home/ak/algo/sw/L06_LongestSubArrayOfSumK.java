@@ -11,7 +11,7 @@ package home.ak.algo.sw;
  *         given value k.
  *
  */
-public class L05_LongestSubArrayOfSumK {
+public class L06_LongestSubArrayOfSumK {
 
 	/**
 	 * In case of variable window size problem, we need to check for all the

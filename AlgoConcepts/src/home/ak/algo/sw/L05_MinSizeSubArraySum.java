@@ -11,7 +11,7 @@ package home.ak.algo.sw;
  *         equal to ‘S’. Return 0 if no such subarray exists.
  *
  */
-public class L04_MinSizeSubArraySum {
+public class L05_MinSizeSubArraySum {
 
 	static int findMinSubArray(int S, int[] arr) {
 		int start = 0;

@@ -12,7 +12,7 @@ import java.util.List;
  *         Print all subsequence whose sum adds upto K
  *
  */
-public class L8_SubsequencesWithSumK {
+public class L08_SubsequencesWithSumK {
 
 	public static void subsequences(int[] arr, int K) {
 		subsequences(0, arr.length, 0, new ArrayList<Integer>(), arr, K);

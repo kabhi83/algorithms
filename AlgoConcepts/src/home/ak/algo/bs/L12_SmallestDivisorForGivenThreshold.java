@@ -34,7 +34,7 @@ public class L12_SmallestDivisorForGivenThreshold {
 			int mid = start + (end - start) / 2;
 			// mid is giving summation lesser than equal to threshold, but we have to look
 			// even smaller; hence do search on left
-			if (sumAfterDivision(nums, mid) < threshold) {
+			if (sumAfterDivision(nums, mid) <= threshold) {
 				ans = mid;
 				end = mid - 1;
 			} else {

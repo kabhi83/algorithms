@@ -15,7 +15,7 @@ public class L02_FirstOccurrenceOfX {
 		int start = 0, end = arr.length - 1;
 		int result = -1;
 		while (start <= end) {
-			int mid = (start + end) >> 1;
+			int mid = (start + end) >> 1; // Right shift divides the number by 2
 
 			if (arr[mid] == x) {
 				// found - but look left for first occurrance

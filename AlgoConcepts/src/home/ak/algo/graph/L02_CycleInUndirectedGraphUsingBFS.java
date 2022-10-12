@@ -34,7 +34,7 @@ public class L02_CycleInUndirectedGraphUsingBFS {
 
 	public static boolean isCyclicGraph(Graph graph) {
 
-		// Vertices are lebelled from 1
+		// Vertices are labeled from 1
 		int vertices = graph.getAdjacencyList().size();
 		Map<Integer, List<Integer>> adjList = graph.getAdjacencyList();
 		boolean[] visited = new boolean[vertices + 1]; // 0th index is invalid
@@ -56,8 +56,9 @@ public class L02_CycleInUndirectedGraphUsingBFS {
 							queue.add(new Pair<Integer, Integer>(adjVertex, currVertex));
 							visited[adjVertex] = true;
 						} else if (adjVertex != parentVertex) {
-							// Check if the adjacent vertex is same as the parent else return true
-							// cycle detected
+							// Check if the adjacent vertex is same as the parent. If it is same, then it's
+							// expected that we came from the adjacent node to the current node; else return
+							// true as we are arriving from a different node i.e., cycle detected
 							return true;
 						}
 					}
@@ -79,9 +80,9 @@ public class L02_CycleInUndirectedGraphUsingBFS {
 		graph.addUndirectedEdge(7, 8);
 		graph.addUndirectedEdge(5, 10);
 		graph.addUndirectedEdge(10, 9);
-		//graph.addUndirectedEdge(9, 8);
+		// graph.addUndirectedEdge(9, 8);
 		graph.addUndirectedEdge(8, 11);
-		
+
 		System.out.println(isCyclicGraph(graph));
 	}
 

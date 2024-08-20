@@ -1,7 +1,7 @@
 /**
  * 
  */
-package home.ak.algo.binaysearch;
+package home.ak.algo.binarysearch;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package home.ak.algo.binaysearch;
+package home.ak.algo.binarysearch;
 /**
  * @author kundu
  * 

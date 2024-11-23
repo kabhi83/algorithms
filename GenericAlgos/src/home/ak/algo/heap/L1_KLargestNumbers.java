@@ -16,7 +16,7 @@ import java.util.PriorityQueue;
  *         Input: [3, 1, 5, 12, 2, 11], K = 3, Output: [5, 12, 11]
  *
  */
-public class KLargestNumbers {
+public class L1_KLargestNumbers {
 
 	public static List<Integer> findKLargestNumbers(int[] nums, int k) {
 		// initialize the min heap
@@ -24,7 +24,7 @@ public class KLargestNumbers {
 		for (int i : nums) {
 			minHeap.add(i);
 			if (minHeap.size() > k) {
-				// Remove the top element
+				// Remove the top (minimum) element from heap
 				minHeap.poll();
 			}
 		}
@@ -32,10 +32,10 @@ public class KLargestNumbers {
 	}
 
 	public static void main(String[] args) {
-		List<Integer> result = KLargestNumbers.findKLargestNumbers(new int[] { 3, 1, 5, 12, 2, 11 }, 3);
+		List<Integer> result = L1_KLargestNumbers.findKLargestNumbers(new int[] { 3, 1, 5, 12, 2, 11 }, 3);
 		System.out.println("Here are the top K numbers: " + result);
 
-		result = KLargestNumbers.findKLargestNumbers(new int[] { 5, 12, 11, -1, 12 }, 3);
+		result = L1_KLargestNumbers.findKLargestNumbers(new int[] { 5, 12, 11, -1, 12 }, 3);
 		System.out.println("Here are the top K numbers: " + result);
 	}
 

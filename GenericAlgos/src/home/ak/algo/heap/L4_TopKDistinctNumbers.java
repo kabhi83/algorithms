@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  *         Both '11' and '12' top K distinct numbers.
  *
  */
-public class TopKDistinctNumbers {
+public class L4_TopKDistinctNumbers {
 
 	public static List<Integer> findTopKDistinctNumbers(int[] nums, int k) {
 		List<Integer> topNumbers = new ArrayList<>(k);
@@ -46,10 +46,10 @@ public class TopKDistinctNumbers {
 	}
 
 	public static void main(String[] args) {
-		List<Integer> result = TopKDistinctNumbers.findTopKDistinctNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);
+		List<Integer> result = L4_TopKDistinctNumbers.findTopKDistinctNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);
 		System.out.println("Here are the K frequent numbers: " + result);
 
-		result = TopKDistinctNumbers.findTopKDistinctNumbers(new int[] { 5, 12, 11, 3, 11 }, 2);
+		result = L4_TopKDistinctNumbers.findTopKDistinctNumbers(new int[] { 5, 12, 11, 3, 11 }, 2);
 		System.out.println("Here are the K frequent numbers: " + result);
 	}
 

@@ -28,7 +28,7 @@ import java.util.Map;
  *         'C', 'B', 'B', 'C']
  *
  */
-public class FruitBasket {
+public class L8_FruitBasket {
 
 	public static int maxFruitsIntoBasket(char[] fruits) {
 		if (null == fruits || fruits.length == 0) {

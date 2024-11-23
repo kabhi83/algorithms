@@ -12,7 +12,7 @@ import java.util.Arrays;
  *         ‘K’ in it.
  *
  */
-public class AverageOfSubarrayOfSizeK {
+public class L4_AverageOfSubarrayOfSizeK {
 
 	public static double[] findAverages(int[] arr, int K) {
 		double[] result = new double[arr.length - K + 1];
@@ -40,7 +40,7 @@ public class AverageOfSubarrayOfSizeK {
 	public static void main(String[] args) {
 		int[] arr = { 1, 3, 2, 6, -1, 4, 1, 8, 2 };
 		int K = 5;
-		double[] result = AverageOfSubarrayOfSizeK.findAverages(arr, K);
+		double[] result = L4_AverageOfSubarrayOfSizeK.findAverages(arr, K);
 		System.out.println("Averages of subarrays of size K: " + Arrays.toString(result));
 	}
 

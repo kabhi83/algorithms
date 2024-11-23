@@ -12,7 +12,7 @@ package home.ak.algo.slidingwindow;
  *         Example 1: Input: [2, 1, 5, 1, 3, 2], k=3 Output: 9 Explanation: Subarray with
  *         maximum sum is [5, 1, 3].
  */
-public class MaxSumSubArrayOfSizeK {
+public class L2_MaxSumSubArrayOfSizeK {
 
 	public static int findMaxSumSubArray(int[] arr, int k) {
 		int maxSum = 0, windowSum = 0;
@@ -37,9 +37,9 @@ public class MaxSumSubArrayOfSizeK {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Maximum sum of a subarray of size K: "
-				+ MaxSumSubArrayOfSizeK.findMaxSumSubArray(new int[] { 2, 1, 5, 1, 3, 2 }, 3));
+				+ L2_MaxSumSubArrayOfSizeK.findMaxSumSubArray(new int[] { 2, 1, 5, 1, 3, 2 }, 3));
 		System.out.println("Maximum sum of a subarray of size K: "
-				+ MaxSumSubArrayOfSizeK.findMaxSumSubArray(new int[] { 2, 3, 4, 1, 5 }, 2));
+				+ L2_MaxSumSubArrayOfSizeK.findMaxSumSubArray(new int[] { 2, 3, 4, 1, 5 }, 2));
 	}
 
 }

@@ -19,7 +19,7 @@ import java.util.Map;
  *         substring without any repeating characters is "ab".
  *
  */
-public class NoRepeatSubstring {
+public class L1_NoRepeatSubstring {
 
 	/**
 	 * We can use a HashMap to remember the last index of each character we have
@@ -49,9 +49,9 @@ public class NoRepeatSubstring {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("Length of the longest substring: " + NoRepeatSubstring.findLength("aabccbb"));
-		System.out.println("Length of the longest substring: " + NoRepeatSubstring.findLength("abbbb"));
-		System.out.println("Length of the longest substring: " + NoRepeatSubstring.findLength("abccde"));
+		System.out.println("Length of the longest substring: " + L1_NoRepeatSubstring.findLength("aabccbb"));
+		System.out.println("Length of the longest substring: " + L1_NoRepeatSubstring.findLength("abbbb"));
+		System.out.println("Length of the longest substring: " + L1_NoRepeatSubstring.findLength("abccde"));
 	}
 
 }

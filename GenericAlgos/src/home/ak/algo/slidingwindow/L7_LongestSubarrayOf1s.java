@@ -19,7 +19,7 @@ package home.ak.algo.slidingwindow;
  *         the longest contiguous subarray of 1s having length 9.
  *
  */
-public class LongestSubarrayOf1s {
+public class L7_LongestSubarrayOf1s {
 
 	public static int findLength(int[] arr, int k) {
 		int windowStart = 0, maxLength = 0, max1Count = 0;

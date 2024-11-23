@@ -23,11 +23,12 @@ import java.util.PriorityQueue;
  *         numbers appeared once.
  *
  */
-public class TopKFrequentNumbers {
+public class L5_TopKFrequentNumbers {
 
 	public static List<Integer> findTopKFrequentNumbers(int[] nums, int k) {
 		List<Integer> topNumbers = new ArrayList<>(k);
 
+		//Build the frequency map
 		Map<Integer, Integer> freqMap = new HashMap<>();
 		for (int i : nums) {
 			freqMap.put(i, freqMap.getOrDefault(i, 0) + 1);
@@ -52,10 +53,10 @@ public class TopKFrequentNumbers {
 	}
 
 	public static void main(String[] args) {
-		List<Integer> result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);
+		List<Integer> result = L5_TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);
 		System.out.println("Here are the K frequent numbers: " + result);
 
-		result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 5, 12, 11, 3, 11 }, 2);
+		result = L5_TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 5, 12, 11, 3, 11 }, 2);
 		System.out.println("Here are the K frequent numbers: " + result);
 	}
 

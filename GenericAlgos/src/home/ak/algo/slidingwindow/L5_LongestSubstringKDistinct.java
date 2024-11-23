@@ -18,7 +18,7 @@ import java.util.Map;
  *         characters is "araa".
  *
  */
-public class LongestSubstringKDistinct {
+public class L5_LongestSubstringKDistinct {
 
 	public static int findLength(String str, int k) {
 		if (str == null || str.length() == 0) {
@@ -56,9 +56,9 @@ public class LongestSubstringKDistinct {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Length of the longest substring: " + LongestSubstringKDistinct.findLength("araaci", 2));
-		System.out.println("Length of the longest substring: " + LongestSubstringKDistinct.findLength("araaci", 1));
-		System.out.println("Length of the longest substring: " + LongestSubstringKDistinct.findLength("cbbebi", 3));
+		System.out.println("Length of the longest substring: " + L5_LongestSubstringKDistinct.findLength("araaci", 2));
+		System.out.println("Length of the longest substring: " + L5_LongestSubstringKDistinct.findLength("araaci", 1));
+		System.out.println("Length of the longest substring: " + L5_LongestSubstringKDistinct.findLength("cbbebi", 3));
 
 	}
 

@@ -21,7 +21,7 @@ import java.util.Map;
  *         the 'c' with 'b' to have a longest repeating substring "bbbb".
  *
  */
-public class CharacterReplacement {
+public class L6_CharacterReplacement {
 
 	/**
 	 * Current window size is from windowStart to windowEnd. We have a letter which
@@ -33,16 +33,24 @@ public class CharacterReplacement {
 	 */
 	public static int findLength(String str, int k) {
 
-		int windowStart = 0, maxLength = 0, maxRepeatLetterCount = 0;
+		int windowStart = 0, maxLength = 0, maxFrequency = 0;
+
 		// Initialize the HashMap for character frequency
 		Map<Character, Integer> letterFreqMap = new HashMap<>();
 
+		// Find longest repeating character
 		for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {
 			char rightChar = str.charAt(windowEnd);
 			letterFreqMap.put(rightChar, letterFreqMap.getOrDefault(rightChar, 0) + 1);
-			maxRepeatLetterCount = Math.max(maxRepeatLetterCount, letterFreqMap.get(rightChar));
 
-			if (windowEnd - windowStart + 1 - maxRepeatLetterCount >= k) {
+			// Find the max frequency in the frequency map
+			maxFrequency = Math.max(maxFrequency, letterFreqMap.get(rightChar));
+
+			// Can replace only k characters, so shrink the window if we need to replace
+			// more than k char
+			// (This condition verifies if the amount of characters we have to change is
+			// whether allowed to change)
+			if ((windowEnd - windowStart + 1) - maxFrequency >= k) {
 				char leftChar = str.charAt(windowStart);
 				letterFreqMap.put(leftChar, letterFreqMap.get(leftChar) - 1);
 				windowStart++;
@@ -57,9 +65,9 @@ public class CharacterReplacement {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(CharacterReplacement.findLength("aabccbb", 2));
-		System.out.println(CharacterReplacement.findLength("abbcb", 1));
-		System.out.println(CharacterReplacement.findLength("abccde", 1));
+		System.out.println(L6_CharacterReplacement.findLength("aabccbb", 2));
+		System.out.println(L6_CharacterReplacement.findLength("abbcb", 1));
+		System.out.println(L6_CharacterReplacement.findLength("abccde", 1));
 	}
 
 }

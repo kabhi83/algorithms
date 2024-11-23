@@ -16,7 +16,7 @@ package home.ak.algo.slidingwindow;
  *         '7' is [5, 2].
  *
  */
-public class MinSizeSubArraySum {
+public class L3_MinSizeSubArraySum {
 
 	public static int findMinSubArray(int[] arr, int S) {
 		int windowSum = 0, windowStart = 0;
@@ -38,11 +38,11 @@ public class MinSizeSubArraySum {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int result = MinSizeSubArraySum.findMinSubArray(new int[] { 2, 1, 5, 2, 3, 2 }, 7);
+		int result = L3_MinSizeSubArraySum.findMinSubArray(new int[] { 2, 1, 5, 2, 3, 2 }, 7);
 		System.out.println("Smallest subarray length: " + result);
-		result = MinSizeSubArraySum.findMinSubArray(new int[] { 2, 1, 5, 2, 8 }, 7);
+		result = L3_MinSizeSubArraySum.findMinSubArray(new int[] { 2, 1, 5, 2, 8 }, 7);
 		System.out.println("Smallest subarray length: " + result);
-		result = MinSizeSubArraySum.findMinSubArray(new int[] { 3, 4, 1, 1, 6 }, 8);
+		result = L3_MinSizeSubArraySum.findMinSubArray(new int[] { 3, 4, 1, 1, 6 }, 8);
 		System.out.println("Smallest subarray length: " + result);
 
 	}

@@ -102,5 +102,4 @@ public class SnakeGame {
 
 	// The space complexity of the SnakeGame is O(N + M) where N is the length of
 	// the snake and M is the total number of food items.
-
 }

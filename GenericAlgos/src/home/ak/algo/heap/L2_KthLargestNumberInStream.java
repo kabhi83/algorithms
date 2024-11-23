@@ -21,13 +21,14 @@ import java.util.stream.Collectors;
  *         given number and return the Kth largest number.
  *
  */
-public class KthLargestNumberInStream {
+public class L2_KthLargestNumberInStream {
 
 	static PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 	final int k;
 
-	public KthLargestNumberInStream(int[] nums, int k) {
+	public L2_KthLargestNumberInStream(int[] nums, int k) {
 		minHeap.addAll(Arrays.stream(nums).boxed().collect(Collectors.toList()));
+		//minHeap.addAll(Arrays.stream(nums).boxed().toList()); // Java 17
 		this.k = k;
 		while (minHeap.size() > k) {
 			// Remove the elements smaller than the kth element
@@ -47,7 +48,7 @@ public class KthLargestNumberInStream {
 
 	public static void main(String[] args) {
 		int[] input = new int[] { 3, 1, 5, 12, 2, 11 };
-		KthLargestNumberInStream kthLargestNumber = new KthLargestNumberInStream(input, 4);
+		L2_KthLargestNumberInStream kthLargestNumber = new L2_KthLargestNumberInStream(input, 4);
 		System.out.println("4th largest number is: " + kthLargestNumber.add(6));
 		System.out.println("4th largest number is: " + kthLargestNumber.add(13));
 		System.out.println("4th largest number is: " + kthLargestNumber.add(4));

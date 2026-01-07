@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  *         3+4(=7), then 5+6(=11), 7+11(=18). Total cost is 36 (7+11+18)
  *
  */
-public class ConnectRopes {
+public class L7_ConnectRopes {
 
 	public static int minimumCostToConnectRopes(int[] ropeLengths) {
 
@@ -47,11 +47,11 @@ public class ConnectRopes {
 	}
 
 	public static void main(String[] args) {
-		int result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5 });
+		int result = L7_ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5 });
 		System.out.println("Minimum cost to connect ropes: " + result);
-		result = ConnectRopes.minimumCostToConnectRopes(new int[] { 3, 4, 5, 6 });
+		result = L7_ConnectRopes.minimumCostToConnectRopes(new int[] { 3, 4, 5, 6 });
 		System.out.println("Minimum cost to connect ropes: " + result);
-		result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5, 2 });
+		result = L7_ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5, 2 });
 		System.out.println("Minimum cost to connect ropes: " + result);
 	}
 

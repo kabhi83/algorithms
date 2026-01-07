@@ -40,7 +40,7 @@ public class L08_MinimumInRotatedSortedArray2 {
 				start = mid + 1;
 			} else {
 				// No particular section can be eliminated directly but definitely the last
-				// elemenet can be removed safely
+				// element can be removed safely
 				end--;
 			}
 		}

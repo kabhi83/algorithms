@@ -42,7 +42,7 @@ public class L06_OccurrenceCount {
 					// search right for last occurrence
 					start = mid + 1;
 				}
-			} else if (arr[mid] < x) {
+			} else if (arr[mid] < x) { // x is on the right as mid is less than x
 				start = mid + 1;
 			} else {
 				end = mid - 1;

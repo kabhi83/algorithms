@@ -12,6 +12,11 @@ import java.util.List;
  *         Technique to print only 1 answer
  * 
  *         In base case if the condition is satisfied, return true
+ * 
+ *         Function should return a boolean
+ * 
+ *         Validate the boolean return value during the function call. If true,
+ *         just return, else false.
  *
  */
 public class L09_AnySubsequenceWithSumK {

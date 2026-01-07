@@ -18,21 +18,19 @@ public class L02_FirstOccurrenceOfX {
 			int mid = (start + end) >> 1; // Right shift divides the number by 2
 
 			if (arr[mid] == x) {
-				// found - but look left for first occurrance
+				// found - but look left for first occurrence
 				result = mid;
 				end = mid - 1;
-				continue; // to retrigger search
+				continue; // to re-trigger search
 			}
 
-			if (arr[mid] < x) {
-				// Look right
+			if (arr[mid] < x) { // Look right, since the item is greater than mid
 				start = mid + 1;
-			} else {
-				// look left
+			} else { // look left
 				end = mid - 1;
 			}
 		}
-		return result; // if element is found it will be start value
+		return result; // if element is found it will be first occurence
 	}
 
 	public static void main(String[] args) {

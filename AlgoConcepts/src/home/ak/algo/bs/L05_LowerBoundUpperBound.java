@@ -18,12 +18,11 @@ public class L05_LowerBoundUpperBound {
 	 */
 	public static int lowerBound(int[] arr, int x) {
 		int start = 0, end = arr.length - 1;
-		int result = arr.length;
+		int result = arr.length; // Hypothetical index if we don't find a lower bound
 		while (start <= end) {
 			int mid = (start + end) >> 1;
-			if (arr[mid] >= x) {
-				// Always search in the left for better solution
-				result = mid;
+			if (arr[mid] >= x) { // May be an answer as we are not searching exact element
+				result = mid; // Always search in the left for better solution
 				end = mid - 1;
 			} else {
 				start = mid + 1;
@@ -40,12 +39,11 @@ public class L05_LowerBoundUpperBound {
 		int result = arr.length;
 		while (start <= end) {
 			int mid = (start + end) >> 1;
-			if (arr[mid] <= x) { // since we need greater
-				start = mid + 1;
-			} else {
-				// > x, then we need to first, hence move left
+			if (arr[mid] > x) { // since we need greater
 				result = mid;
-				end = mid - 1;
+				end = mid - 1; // Look for more smaller index in the left
+			} else {
+				start = mid + 1; // Look right if the greater value is not found
 			}
 		}
 		return result == arr.length ? -1 : result;

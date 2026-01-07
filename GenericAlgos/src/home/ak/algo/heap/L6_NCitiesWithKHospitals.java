@@ -13,10 +13,10 @@ import java.util.PriorityQueue;
  *         Given n cities with the population array depicting the population of
  *         each city and k hospitals to be built such that k > n. Built k
  *         hospitals in n cities such that the maximum load on an hospital is
- *         minimized load where load = population/hospitals
+ *         minimized, where load = population/hospitals
  *
  */
-public class NCitiesWithKHospitals {
+public class L6_NCitiesWithKHospitals {
 
 	static class City {
 		int id;

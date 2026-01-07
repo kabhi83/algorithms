@@ -6,6 +6,9 @@ package home.ak.algo.recursion;
 /**
  * @author kundu
  * 
+ * 
+ *         function should have an integer return type
+ * 
  *         base case:
  * 
  *         return 1 if condition satisfies and return 0 if condition does not

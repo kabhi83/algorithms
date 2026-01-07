@@ -29,14 +29,14 @@ public class L08_SubsequencesWithSumK {
 		// Take the value
 		list.add(arr[idx]);
 		subsequences(idx + 1, arrLength, sum + arr[idx], list, arr, K);
-		list.remove(list.size() - 1);
+		list.remove(list.size() - 1); // last added value
 
 		// Not take the value
 		subsequences(idx + 1, arrLength, sum, list, arr, K);
 	}
-	
+
 	public static void main(String[] args) {
-		int[] arr = {1, 2, 1};
+		int[] arr = { 1, 2, 1 };
 		subsequences(arr, 2);
 	}
 

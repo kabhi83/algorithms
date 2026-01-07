@@ -19,7 +19,7 @@ public class L01_BinarySearchOnReverseSortedArray {
 			int mid = start + (end - start) / 2; // To avoid integer overflow
 			if (x == arr[mid]) {
 				return mid;
-			} else if (x > arr[mid]) {
+			} else if (x > arr[mid]) { // Item is on the left hand side
 				end = mid - 1;
 			} else {
 				start = mid + 1;
